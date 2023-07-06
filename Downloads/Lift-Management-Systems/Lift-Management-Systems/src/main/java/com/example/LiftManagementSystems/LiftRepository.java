@@ -36,7 +36,7 @@ public class LiftRepository {
                 passengerDb.remove(key);
         }
 
-        return "All passengers whose ids are lessthan 5 is deleted successfully";
+        return "All passengers whose ids are less than 5 is deleted successfully";
 
 
     }

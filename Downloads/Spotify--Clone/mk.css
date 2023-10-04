@@ -1,0 +1,408 @@
+:root{
+    --white:#fff;
+    --light-grey:#232323 ;
+    --grey:#121212;
+    --black:#000;
+}
+
+body,html{
+   height: 100%;
+    padding:0px;
+    margin: 0px;
+    
+    font-family:"Nunito",sans-serif;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--black);
+    color: var(--white);
+}
+a{
+    color: var(--white);
+    text-decoration: none;
+}
+.container{
+   
+   display: flex;
+    flex: 1;
+    background-color: var(--black);
+    overflow: hidden;
+    padding: 0.5rem;
+   }
+
+   .sidebar{
+     flex: 0.25;
+     background-color: var(--black);
+     border-radius: 0.5rem;
+     margin-right: 0.5rem;
+   }
+   .maindiv{
+    flex: 0.8;
+    background-color:rgb(204, 66, 11);
+    border-radius: 0.5rem;
+    justify-content: row;
+  }
+
+  .sidetop{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--grey);
+    /* height: 30%; */
+    gap: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem !important;
+    padding: 1rem 1.5rem;
+}
+
+.link,.link2{
+  display: flex;
+ justify-content: flex-start;
+  gap: 1rem;
+  align-items: center;
+  opacity: 0.7;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+
+
+}
+.albumdes{
+  opacity: 0.7;
+}
+.link:hover{
+  opacity: 1;
+  transition: all 0.3s;
+}
+
+.link>img ,.link>i,.link2>img,.link2>i{
+  height: 1.2rem;
+  width: 1.2rem;
+}
+.album>.link>img{
+  border-radius: 50%;
+}
+.link3>img{
+ padding: 0.5rem;
+  border-radius: 50%;
+}
+.link2 p,.link p{
+  font-size: 1rem;
+  color :var(--white)
+}
+.navbar>.link>.chips,.link3>img{
+  font-size: 0.9rem;
+  font-weight: bold;
+  background-color: #000;
+}
+.navbar>.link>.chips>i{
+  font-size: 1rem;
+  font-weight: 600;
+}
+.albumname,.link2{
+  opacity: 1;
+}
+.btx:hover{
+transform: scale(1.05);
+
+}
+.sidebottom{
+  background-color: var(--grey);
+ 
+
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+}
+.album{
+  height: 80vh;
+  overflow-y: auto;
+}
+/* ::-webkit-scrollbar{
+  display: none;
+} */
+.sidebottom>h1{
+  margin: 0;
+}
+.sidebottomdiv1{
+  display: flex;
+ justify-content: space-between;
+ align-items: center;
+  
+}
+.chips{
+  
+  margin-top: 0.5rem;
+  font-size: 10px;
+  padding: 0.5rem 0.7rem;
+  width: fit-content;
+  background-color: var(--light-grey);
+  color: var(--white);
+  border-radius: 5rem;
+  font-weight: 800;
+  
+}
+.chips>img{
+  font-size: 2px;
+}
+.albumflex{
+  margin-bottom: 0.1rem !important;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0rem;
+}
+.albumflex:hover{
+  background-color:#1a1a1a;
+  transition: all 0.3s;
+}
+.album{
+  margin-top: 1rem;
+}
+.albumcover{
+  width: 3rem !important;
+  height: 3rem !important;
+  border-radius: 0.2rem;
+}
+.colflex p{
+margin: 0rem;
+font-weight: normal;
+font-size: 0.8rem;
+}
+.albumname{
+  color: var(--white);
+  font-size: 1rem !important;
+  margin-bottom: 0.35rem !important;
+}
+.navbar{
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--grey);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.maindiv{
+overflow-y: auto;
+background-color: var(--grey);
+padding: 0rem 1rem;
+ padding-bottom: 6rem;
+
+}
+.cardcontainer{
+  display: flex;
+  flex-wrap: wrap;
+ 
+  gap: 0.5rem;
+}
+.card{
+  width: 150px;
+  display: flex;
+   flex-direction: column;
+  background-color: #181818ff;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  margin: 0rem 0.75rem;
+  height: fit-content;
+}
+.cardimg{
+  width: 100%;
+   border-radius: 0.35rem;
+   height: 150px;
+
+}
+.cardname{
+ 
+  
+  margin: 0.5rem 0rem;
+}
+.carddesc{
+  margin: 0;
+  opacity: 0.5;
+  font-size: 0.9rem;
+}
+
+.playbtn{
+  background-color: transparent;
+  width:60px;
+  height:60px;
+  display: none;
+
+
+}
+.card:hover{
+  background-color:var(--light-grey) ;
+
+}
+.card:hover .playbtn{
+ display: block;
+
+ z-index: 1;
+
+ }
+.player{
+  width: 100vw;
+  height: 80px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color:var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+.volumediv,.volumediv1{
+
+ width: 25vw;
+ display: flex;
+ 
+ 
+}
+.volumediv{
+  margin-right: 2rem;
+  justify-content: flex-end;
+
+}
+.volumediv1{
+  margin-left: 1.5rem;
+}
+
+
+
+.volumemid{
+  
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  }
+
+  .playercontrol{
+    display: flex;
+ 
+  align-items: center;
+
+  }
+  .volumeslider{
+    width: 100px;
+    height: 4px;
+    border-radius: 100px;
+  }
+  .timelineslider{
+    width: 40vw;
+     margin: 0px 10px;
+      border-radius: 100px;
+  }
+ 
+  .timelineslider:hover,
+  .volumeslider:hover{
+    background-color: #1bd768;
+  }
+
+  .timelineslider,.volumeslider{
+    -webkit-appearance:none ;
+   
+  }
+  .timelineslider::-webkit-slider-runnable-track,
+  .volumeslider::-webkit-slider-runnable-track{
+    height: 4px;
+    background: #ddd;
+    border: none;
+    border-radius:100px;
+  }
+.timelineslider::-webkit-slider-thumb,
+.volumeslider::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  border: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background-color: #1bd768;
+  margin-top: -6px;
+
+}
+.timelineslider:focus,
+.volumeslider:focus{
+  outline: none;
+}
+.timelineslider:focus:-webkit-slider-runnable-track{
+    background: #ccc;
+  }
+
+  .footerlogo{
+    display: flex;
+  
+   
+}
+.footerlogo1{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background-color: #1f1f1f ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   font-size: 30px;
+   margin-inline: 10px;
+   
+    
+}
+
+
+.mydownloadicon{
+    margin-right: 10px;
+    font-size: 20px;
+   
+}
+
+
+
+td{
+    font-size: 14px;
+    
+    color: #666666;
+    padding:  5px 10px;
+}
+
+.row1{
+    display: flex;
+    justify-content: space-between;
+   
+   }
+.row11{
+    flex: 2;
+    
+}
+.row12{
+    flex: 3;
+   
+}
+/* .row11>table{
+    width: 100%;
+} */
+table{
+    width: 100%;
+    color: #909090;
+}
+
+hr{
+margin: 3rem 1rem;
+font-weight: 10;
+
+color: #2a2a2a;
+opacity: 0.3;
+
+}
+.row3{
+  color: #909090;
+}
+.r1>td{
+  font-size: 14px;
+  color: #ccc;
+  font-weight: bolder;
+}
+.row1,.row2{
+  margin-top: 3rem;
+}
